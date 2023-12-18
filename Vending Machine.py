@@ -1,6 +1,5 @@
 # This is for the delay on print text.
 import time
-
 print ("""    
   _      __    __                     __                      _   __            ___             __  ___         __   _         
  | | /| / /__ / /______  __ _  ___   / /____    __ _  __ __  | | / /__ ___  ___/ (_)__  ___ _  /  |/  /__ _____/ /  (_)__  ___ 
@@ -63,6 +62,7 @@ if choice in Products:
             payment = float(input(f"Please insert {money:.2f} Aed: "))
             if payment >= money:
                 change = payment - money
+                print("Processing Order...")
                 time.sleep(1)
                 # This will print the amount of change the user will recieve also available in decimals due to ".2f"
                 print(f"Thank You for using the vending Machine Your change is {change:.2f} Aed.")
@@ -113,6 +113,8 @@ else:
             payment = float(input(f"Please insert {money:.2f} Aed: "))
             if payment >= money:
                 change = payment - money
+                time.sleep(1)
+                print("Processing Order...")
                 time.sleep(1)
                 print(f"Thank You for using the vending Machine Your change is {change:.2f} Aed.")
                 time.sleep(1)
